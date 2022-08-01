@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/CodingTutorialLogo6.png" type="image/icon" style="border-radius: 50%;">
+    <title>Welcome In CidingTutorial</title>
+    <link rel="stylesheet" href="navigationDesignForAllPages.css">
+    <link rel="stylesheet" href="mainTagDesignForAllPages.css">
+    <link rel="stylesheet" href="searchBarDesignForAllPages.css">
+
+    <!-- Link Of Icons -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+     <!-- Font Awesome Link -->
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head> 
+<body>
+    <header id="headerSection">
+        <nav class="navigationSection">
+            <div class="heading" id="topHead">
+
+                <div class="title">
+                    <img src="Images/CodingTutorialLogo6.png" alt="Logo" class="headingIcon">
+                    <h1>CodingTutorial</h1>
+                </div>
+
+                <div class="sIconForMobile">
+                    <span class="material-symbols-outlined" id="searchIconCustom" onclick="searchIconClicked()">search</span>
+                </div>
+
+                <div class="searchBar">
+                    <input type="text" name="searchText" placeholder="Search Here" id="searchText" onclick="inputTextWidthIncrease()" onkeyup="inputTextKeyDownToDiaplySearchList()">
+                    <span class="material-symbols-outlined" id="searchIcon" onclick="laptopSearchIconclicked()">search</span>
+                </div>
+
+                <div class="hamBurgerDemo">
+                    <div class="hamBurger">
+                        <div class="burger" id="burgerId" onclick="hamBurgerClicked(),hamBurgerClickedToOpenSlidePanel()">
+                            <span id="line1"></span>
+                            <span id="line2"></span>
+                            <span id="line3"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="navigationItem" onclick="handNavClicked()" onscroll="handNavClicked()">
+            
+                <i class="fa-solid fa-hand-pointer handIcon" id="handIconId"></i>
+
+                <a href="#" class="navigationIcon">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p>C</p>
+                </a>
+                <a  href="#" class="navigationIcon">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p>C++</p>
+                </a>
+                <a  href="#" class="navigationIcon">
+                    <i class="fa-brands fa-java"></i>
+                    <p>Java</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-brands fa-python"></i>
+                    <p>Python</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-brands fa-html5"></i>
+                    <p>HTML</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-brands fa-css3"></i>
+                    <p>CSS</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-brands fa-js"></i>
+                    <p>JavaScript</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-brands fa-php"></i>
+                    <p>PHP</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-brands fa-android"></i>
+                    <p>Android</p>
+                </a>
+                <a href="#" class="navigationIcon">
+                    <i class="fa-solid fa-database"></i>
+                    <p>SQL</p>
+                </a>  
+            </div>
+        </nav>
+    </header>
+
+    <hr>
+    
+    <div class="mobileSearchText" id="mobileSearchTextId">
+        <input type="text" placeholder="Search Here" name="search"  class="searchTextMobile" id="searchTextMobileId" onclick="searchBoxClicked()" onkeyup="searchTextForMobileClicked()">
+        <input type="button" value="Search" name="searchBtn" class="searchButton" onclick="laptopSearchIconclicked()">
+    </div>
+
+    <hr>
+
+    
+
+    <!-- Search List Panel For Laptop -->
+
+    <div class="searchListForLaptop" id="searchListForLaptopId">
+        <ul class="unorderdSearchListForLaptop">
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">tata</a></li>
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">fortuner</a></li>
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">mahindra</a></li>
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">Maruti</a></li>
+        </ul>
+    </div>
+
+                
+
+    <div class="slideDivision" id="slideDivisionId" onclick="slideDivisionOnClicked()" onscroll="slideDivisionOnClicked()">
+
+        <i class="fa-solid fa-hand-pointer handIconOnSlideDivision" id="handIconOnSlideDivisionId"></i>
+        <ul class="ulListForMobile">
+            <li class="ulListItemForMobile"><a href="#">Introduction Of C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Features And Uses Of C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Character Set In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Tokens In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Keywords And Identifiers In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Data Types In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Type Conversion In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Variables In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Constants In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Operators In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Operator Precedence In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Formating Of C Program</a></li>
+            <li class="ulListItemForMobile"><a href="#">Input Output Function In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Comments In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Control Statement In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Decision Statements In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Switch Statement In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Looping Statement In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Goto Statement In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Nested If In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Nesting Of Loop In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Break,Continue And Return In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Array In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Types Of Array In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">String In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Structures In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Typedef And Enumerated Data Types</a></li>
+            <li class="ulListItemForMobile"><a href="#">Functions In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Parameters In Function</a></li>
+            <li class="ulListItemForMobile"><a href="#">Types Of Function In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Library Function In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">User Defined Function In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Scope Of Variables In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Recursive Function In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Pointer In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Pointer Operations In C</a></li>
+            <li class="ulListItemForMobile"><a href="#">Exercises</a></li>
+            <li class="ulListItemForMobile"><a href="#"></a></li>
+            <li class="ulListItemForMobile"><a href="#"></a></li>
+        </ul>
+        
+    </div>
+
+    <main>
+        <div class="round" id="roundId">
+
+        </div>
+        <div class="mainContentDiv">
+            <div class="leftSection" onscroll="leftScroll()" id="scrollLeftTop" onclick="handLeftSectionClicked()">
+                <i class="fa-solid fa-hand-pointer handIconOnLeftSection" id="handIconOnLeftSectionId"></i>
+                <ul class="ulList">
+                    <li class="ulListItem"><a href="#">Introduction Of C</a></li>
+                    <li class="ulListItem"><a href="#">Features And Uses Of C</a></li>
+                    <li class="ulListItem"><a href="#">Character Set In C</a></li>
+                    <li class="ulListItem"><a href="#">Tokens In C</a></li>
+                    <li class="ulListItem"><a href="#">Keywords & Identifiers In C</a></li>
+                    <li class="ulListItem"><a href="#">Data Types In C</a></li>
+                    <li class="ulListItem"><a href="#">Type Conversion In C</a></li>
+                    <li class="ulListItem"><a href="#">Variables In C</a></li>
+                    <li class="ulListItem"><a href="#">Constants In C</a></li>
+                    <li class="ulListItem"><a href="#">Operators In C</a></li>
+                    <li class="ulListItem"><a href="#">Operator Precedence In C</a></li>
+                    <li class="ulListItem"><a href="#">Formating Of C Program</a></li>
+                    <li class="ulListItem"><a href="#">Input Output Function In C</a></li>
+                    <li class="ulListItem"><a href="#">Comments In C</a></li>
+                    <li class="ulListItem"><a href="#">Control Statement In C</a></li>
+                    <li class="ulListItem"><a href="#">Decision Statements In C</a></li>
+                    <li class="ulListItem"><a href="#">Switch Statement In C</a></li>
+                    <li class="ulListItem"><a href="#">Looping Statement In C</a></li>
+                    <li class="ulListItem"><a href="#">Goto Statement In C</a></li>
+                    <li class="ulListItem"><a href="#">Nested If In C</a></li>
+                    <li class="ulListItem"><a href="#">Nesting Of Loop In C</a></li>
+                    <li class="ulListItem"><a href="#">Break,Continue & Return</a></li>
+                    <li class="ulListItem"><a href="#">Array In C</a></li>
+                    <li class="ulListItem"><a href="#">Types Of Array In C</a></li>
+                    <li class="ulListItem"><a href="#">String In C</a></li>
+                    <li class="ulListItem"><a href="#">Structures In C</a></li>
+                    <li class="ulListItem"><a href="#">Typedef & Enumerated Data</a></li>
+                    <li class="ulListItem"><a href="#">Functions In C</a></li>
+                    <li class="ulListItem"><a href="#">Parameters In Function</a></li>
+                    <li class="ulListItem"><a href="#">Types Of Function In C</a></li>
+                    <li class="ulListItem"><a href="#">Library Function In C</a></li>
+                    <li class="ulListItem"><a href="#">User Defined Function In C</a></li>
+                    <li class="ulListItem"><a href="#">Scope Of Variables In C</a></li>
+                    <li class="ulListItem"><a href="#">Recursive Function In C</a></li>
+                    <li class="ulListItem"><a href="#">Pointer In C</a></li>
+                    <li class="ulListItem"><a href="#">Pointer Operations In C</a></li>
+                    <li class="ulListItem"><a href="#">Exercises</a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                    <li class="ulListItem"><a href="#"></a></li>
+                </ul>
+            </div>
+        
+            <div class="rightSection" onscroll="rightScroll()" id="scrollTop">
+                
+                <div class="nextPrevious">
+
+                    <div class="nextPreviousContainer">
+
+                        <div class="previous">
+                            <a href="#">
+                                <i class="fa-solid fa-circle-arrow-left previousIcon"></i>
+                            </a>
+                        </div>
+    
+                        <div class="next">
+                            <a href="#">
+                                <i class="fa-solid fa-circle-arrow-right nextIcon"></i>
+                            </a>
+                        </div>
+
+                    </div>
+    
+                </div>
+
+                <div class="footerAdd">
+
+                </div>
+
+                <div class="footerSection">
+
+                    <div class="topDivInsideFooter">
+
+                        <div class="signUp">
+
+                            <h2 id="signUpHeading">Sign Up</h2>
+        
+                            <table class="signUpTable">
+        
+                                <tr class="signUpTableRow">
+                                    <td>
+                                        <label class="signUpLabel">Name</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Full Name" id="signUpName" class="signUpInputTag" onkeyup="signUpNamefunction()">
+                                    </td>
+                                </tr>
+                                <tr class="signUpTableRow">
+                                    <td></td>
+                                    <td>
+                                        <label class="signUpWarning" id="signUpNameWarning"></label>
+                                    </td>
+                                </tr>
+        
+                                <tr class="signUpTableRow">
+                                    <td>
+                                        <label class="signUpLabel">Email</label>
+                                    </td>
+                                    <td>
+                                        <input type="email" placeholder="Email-Id" id="signUpEmail" class="signUpInputTag" onkeyup="signUpEmailfunction()">
+                                    </td>
+                                </tr>
+                                <tr class="signUpTableRow">
+                                    <td></td>
+                                    <td>
+                                        <label class="signUpWarning" id="signUpEmailWarning"></label>
+                                    </td>
+                                </tr>
+        
+                                <tr class="signUpTableRow">
+                                    <td>
+                                        <label class="signUpLabel">Mobile</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" placeholder="Mobile-No" id="signUpMobile" class="signUpInputTag" onkeyup="signUpMobilefunction()">
+                                    </td>
+                                </tr>
+                                <tr class="signUpTableRow">
+                                    <td></td>
+                                    <td>
+                                        <label class="signUpWarning" id="signUpMobileWarning"></label>
+                                    </td>
+                                </tr>
+        
+                                <tr class="signUpTableRow">
+                                    <td>
+                                        <label class="signUpLabel">Address</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Full Address" id="signUpAddress" class="signUpInputTag" onkeyup="signUpAddressfunction()">
+                                    </td>
+                                </tr>
+                                <tr class="signUpTableRow">
+                                    <td></td>
+                                    <td>
+                                        <label class="signUpWarning" id="signUpAddressWarning"></label>
+                                    </td>
+                                </tr>
+        
+                                <tr class="signUpTableRow">
+                                    <td>
+                                        <label class="signUpLabel">Password</label>
+                                    </td>
+                                    <td>
+                                        <input type="password" placeholder="Password" id="signUpPassword" class="signUpInputTag" onkeyup="signUpPasswordfunction()">
+                                    </td>
+                                </tr>
+                                <tr class="signUpTableRow">
+                                    <td></td>
+                                    <td>
+                                        <label class="signUpWarning" id="signUpPasswordWarning"></label>
+                                    </td>
+                                </tr>
+        
+                            </table>
+        
+                            <input type="button" value="Submit" id="signUpSubmitButton" onclick="signUpSubmitFunction()">
+        
+                        </div>
+
+                        <div class="goToAndTutorialFordiv">
+                            <div class="goUp">
+                                <h2>Click Me</h3>
+                                <a href="#">Home</a>
+                                <a href="#">Tutorial For</a>
+                                <a href="#">Feedback</a>
+                                <a href="#">About</a>
+                                <a href="#">Public Opinion</a>
+                            </div>
+
+
+                            <div class="tutorialFor">
+
+                                <h2>Tutorial For</h2>
+
+                                <div class="leftrightTutorialFor">
+                                    <div class="leftTutorialFor">
+                                        <a href="#">C lang</a>
+                                        <a href="#">java</a>
+                                        <a href="#">C++</a>
+                                        <a href="#">Python</a>
+                                        <a href="#">HTML</a>
+                                    </div>
+                                    <div class="rightTutorialFor">
+                                        <a href="#">CSS</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#">PHP</a>
+                                        <a href="#">Android</a>
+                                        <a href="#">SQL Database</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mediaLink">
+                        <a href="#"><i class="fa-brands fa-twitter twitterIcon"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram instagramIcon"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f facebookIcon"></i></a>
+                    </div>
+                    
+                    <div class="fotterIconLogAndName">
+                        <div class="roundLogoBorder">
+                            <img src="Images/CodingTutorialLogo6.png" alt="logo">
+                        </div>
+                        <h1>CodingTutorial</h1>
+                        <p>Copyright © CodingTutorial 2022 for developers and begginers in coding</p>
+                        <p>Developed By : Sambhaji Sitaram Shinde (Engineering Student Of Information Technology)</p>
+                    </div>
+
+                    <div class="termsAndConditionAndPrivacyPolicy">
+
+                        <div class="termsAndCondition">
+                            <h2>Terms & Condition</h2>
+                            <p>
+                                This website do not gives any permition to use any content of this website on public level it may be copy.
+                            </p>
+                        </div>
+
+                        <div class="privacyPolicy">
+                            <h2>Privacy Policy</h2>
+                            <p>
+                                The Feedback And Login Data is secure and protected.This data reaches only to its authorized user. 
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </main>
+
+    <div>
+        
+    </div>
+
+    <script src="scriptingForAllPages.js"></script>
+    <script src="searchBarScriptForAllPages.js"></script>
+
+</body>
+</html>

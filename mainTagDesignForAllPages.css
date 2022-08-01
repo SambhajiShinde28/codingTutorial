@@ -1,0 +1,1264 @@
+/* Edu TAS Beginner */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+TAS+Beginner&family=Inter:wght@300&family=Merriweather:wght@700&family=Nunito:ital,wght@1,200&family=Updock&display=swap');
+
+/* font family for Caveat, Edu TAS Beginner, Inter, Merriweather, Nunito, Roboto Condensed, Updock, Lora*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+TAS+Beginner&family=Inter:wght@300&family=Lora&family=Merriweather:wght@700&family=Nunito:ital,wght@1,200&family=Roboto+Condensed:wght@300&family=Updock&display=swap');
+
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Touch effect on screeen */
+
+.round{
+    display: none;
+    width: 1px;
+    height: 1px;
+    background-image: radial-gradient(red, yellow,blue,orange);
+    border-radius: 50%;
+    position: fixed;
+    top:0px;
+    left: 0px;    
+    z-index: 1000; 
+    
+    animation-name: mouseA;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mouseA {
+    from{
+        transform: scale(1);
+        transform-origin: center;
+        opacity: 1;
+    }
+    to{
+        transform: scale(100);
+        transform-origin: center;
+        opacity: 0;
+    }
+}
+
+/* left and right section main division */
+
+.mainContentDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Hand Icon On left Section */
+
+.handIconOnLeftSection{
+    display: flex;
+    position: absolute;
+    right: 50%;
+    top: 40%;
+    font-size: 25px;
+    color: #611ead;
+    background-color: var(--navigationbg-color);
+
+    animation-name: handOnLeftSection;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes handOnLeftSection {
+    100%{
+        transform: translateY(-100px);
+    }
+}
+
+/* Style for Left section of main tag */
+
+.leftSection{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    /* border-right: 2px solid black; */
+    overflow-y: scroll;
+    background-color: #e9edc9;
+}
+
+.leftSection::-webkit-scrollbar{
+    width: 2px;
+}
+
+.leftSection::-webkit-scrollbar-track{
+    background-color: #7c8a0a;;
+    width: 2px;
+    height: 0px;
+}
+
+.leftSection::-webkit-scrollbar-thumb{
+    background-color: #bdc869;
+    width: 2px;
+    height: 0px;
+}
+
+/* Left section list for laptop */
+
+.ulList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9edc9; 
+    padding-top: 20px; 
+}
+
+.ulListItem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9edc9;
+    padding: 15px;
+}
+
+.ulListItem a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Inter',cursive;
+    color: black;
+    cursor: pointer;
+}
+
+.ulListItem a:hover{
+    transform: scale(1.1);
+    font-style: italic;
+    color: red;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+}
+
+.ulListItem a:active{
+    color: #cfde5e;
+    transform: scale(1.1);
+}
+
+/* Left section list for mobile */
+
+.ulListForMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9edc9;  
+    padding-top: 20px;
+}
+
+.ulListItemForMobile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9edc9;
+    padding: 15px;
+}
+
+.ulListItemForMobile a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Inter',cursive;
+    color: black;
+    cursor: pointer;
+}
+
+.ulListItemForMobile a:hover{
+    transform: scale(1.1);
+    font-style: italic;
+    color: red;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+}
+
+.ulListItemForMobile a:active{
+    color: #cfde5e;
+    transform: scale(1.1);
+}
+
+/* Style for right section of main tag */
+
+.rightSection{
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.rightSection::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+/* Next and previous button design */
+
+.nextPrevious{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px;
+}
+
+.nextPreviousContainer{
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.previous{
+    background-color: white;
+}
+
+.previous a{
+    background-color: white;
+}
+
+.next{
+    background-color: white;
+}
+
+.next a{
+    background-color: white;
+}
+
+.previousIcon{
+    background-color: white;
+    margin: 10px;
+    padding: 2px;
+    border: 2px solid black;
+    font-size: 50px;
+    color: black;
+    border-radius: 50%;
+}
+
+.previousIcon:hover{
+    transform: scale(0.9);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.previousIcon:active{
+    border: 2px solid #611ead;
+    color: #611ead;
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.nextIcon{
+    background-color: white;
+    margin: 10px;
+    padding: 2px;
+    border: 2px solid black;
+    font-size: 50px;
+    color: black;
+    border-radius: 50%;
+}
+
+.nextIcon:hover{
+    transform: scale(0.9);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.nextIcon:active{
+    border: 2px solid #611ead;
+    color: #611ead;
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+/* Footer Section In Main Tag For Facebook Instagram Twitter */
+
+.footerSection{
+    background-color: #838b99;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 101px;
+    box-shadow: 0px 0px 20px 8px #717378;
+}
+
+/* first div inside footer section */
+
+.topDivInsideFooter{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.signUp{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#signUpHeading{
+    margin: 30px 0px 30px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    background-color: transparent;
+}
+
+.signUpTable{
+    background-color: #838b99;
+}
+
+.signUpTableRow{
+    background-color: #838b99;
+}
+
+.signUpTableRow td{
+    background-color: #838b99;
+}
+
+.signUpLabel{
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.signUpInputTag{
+    border-radius: 5px;
+    padding: 2px 10px;
+    text-align: left;
+    border: 2px solid black;
+    font-size: 16px;
+    width: 200px;
+    color: rgb(48, 45, 45);
+    outline: none;
+    font-family: 'Inter', Courier;
+    margin: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.signUpInputTag:hover{
+    border: 3px solid #2ec4b6;
+    box-shadow: 0px 0px 10px 1px #2ec4b6;
+    outline: none;
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.signUpInputTag:active{
+    border: 3px solid #16697a;
+    box-shadow: 0px 0px 10px 1px #16697a;
+    outline: none;
+}
+
+.signUpWarning{
+    color: rgb(121, 17, 17);
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#signUpSubmitButton{
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin: 15px 0px 35px 0px;
+    outline: none;
+    font-family: 'Inter', Courier;
+    text-align: center;
+    background-color: transparent;
+}
+
+#signUpSubmitButton:hover{
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #1e9bff;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+#signUpSubmitButton:active{
+    transform: scale(0.9);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #4c6172;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+
+
+
+
+.goToAndTutorialFordiv{
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+
+
+
+.goUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.goUp h2{
+    margin: 30px 0px 30px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    background-color: transparent;
+}
+
+.goUp a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-decoration: none;
+    padding: 2px 0px;
+    margin: 5px 0px;
+    background-color: transparent;
+}
+
+.goUp a:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.goUp a:active{
+    border-bottom: 2px solid rgb(246, 53, 53);
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+.tutorialFor{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.leftrightTutorialFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.leftTutorialFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.rightTutorialFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.tutorialFor h2{
+    margin: 30px 0px 30px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    background-color: transparent;
+}
+
+.leftTutorialFor a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-decoration: none;
+    padding: 2px 0px;
+    margin: 5px 0px;
+    background-color: transparent;
+}
+
+.leftTutorialFor a:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.leftTutorialFor a:active{
+    border-bottom: 2px solid rgb(246, 53, 53);
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.rightTutorialFor a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-decoration: none;
+    padding: 2px 0px;
+    margin: 5px 0px;
+    background-color: transparent;
+}
+
+.rightTutorialFor a:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.rightTutorialFor a:active{
+    border-bottom: 2px solid rgb(246, 53, 53);
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+/* Second div in footer section */
+
+.mediaLink{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mediaLink a{
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.twitterIcon{
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 25px;
+    border: 2px solid rgb(35, 2, 88);
+    margin: 5px;
+
+    animation-name: twitter;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes twitter {
+
+    100%{    
+        transform: scale(1.2);
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }  
+}
+
+.twitterIcon:hover{
+    transform: scale(0.9);
+    transform-origin: center;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+    animation: none;
+}
+
+.twitterIcon:active{
+    transform: scale(1);
+    border: 2px solid rgb(208, 36, 10);
+}
+
+.instagramIcon{
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 6px 7px;
+    margin: 5px 50px 2px 50px;
+    border: 2px solid rgb(35, 2, 88);
+
+    animation-name: instagram;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes instagram {
+
+    100%{    
+        transform: scale(1.2);
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.instagramIcon:hover{
+    transform: scale(0.9);
+    transform-origin: center;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+    animation: none;
+}
+
+.instagramIcon:active{
+    transform: scale(1);
+    border: 2px solid rgb(208, 36, 10);
+}
+
+.facebookIcon{
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 6px 11px;
+    border: 2px solid rgb(35, 2, 88);
+    margin: 5px;
+
+    animation-name: facebook;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes facebook {
+
+    100%{    
+        transform: scale(1.2);
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    } 
+}
+
+.facebookIcon:hover{
+    transform: scale(0.9);
+    transform-origin: center;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+    animation: none;
+}
+
+.facebookIcon:active{
+    transform: scale(1);
+    border: 2px solid rgb(208, 36, 10);
+} 
+
+
+
+
+
+/* fotter Icon Logo and heading  styling division */
+
+.fotterIconLogAndName{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.roundLogoBorder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+    /* border: 4px dotted #1abc9c; */
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+    margin: 30px 0px 10px 0px;
+
+    animation-name: samRoundAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes samRoundAnimation {
+    100%{
+        
+        transform: rotate(360deg);
+        transform-origin: center;
+
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.roundLogoBorder img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #020e18;
+
+    animation-name: samRound;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes samRound {
+    100%{
+        
+        transform: rotate(-360deg);
+        transform-origin: center;
+
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.fotterIconLogAndName h1{
+    margin: 5px 0px 30px 0px;
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.fotterIconLogAndName p{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-align: center;
+    padding: 8px 20px;
+    background-color: transparent;
+}
+
+
+
+/* styling for terms and condition, privacy policy */
+
+.termsAndConditionAndPrivacyPolicy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.termsAndCondition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #611ead;
+    padding: 40px 10px;
+    background-color: transparent;
+}
+
+.termsAndCondition h2{
+    margin: 5px 0px 30px 0px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.termsAndCondition p{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    padding: 8px 0px;
+    background-color: transparent;
+}
+
+.privacyPolicy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 40px 10px;
+    background-color: transparent;
+}
+
+.privacyPolicy h2{
+    margin: 5px 0px 30px 0px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.privacyPolicy p{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    padding: 8px 0px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+/* media query */
+
+@media (max-width:1290px){
+
+    .leftSection{
+        width: 27%;
+    }
+
+    .rightSection{
+        width: 73%;
+    }
+
+    .ulListItem a{
+        font-size: 16px;
+    }
+
+    
+    .ulListItem a:active{
+        color: #cfde5e;
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width:1110px) {
+    /* styling for footer section in main tag */
+
+    .signUp{
+        width: 55%;
+    }    
+
+    .goToAndTutorialFordiv{
+        width: 45%;
+    }
+
+    .goUp{
+        width: 45%;
+    }
+
+    .tutorialFor{
+        width: 55%;
+    }
+}
+
+@media (max-width:1060px) {
+    
+    /* Styling for footer section */
+
+    .signUp h2{
+        font-size: 22px;
+    }
+
+    .goUp h2{
+        font-size: 22px;
+    }
+
+    .tutorialFor h2{
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width:980px) {
+    
+    .leftSection{
+        width: 27%;
+    }
+
+    .rightSection{
+        width: 73%;
+    }
+
+} 
+
+@media (max-width:800px){ 
+    .leftSection{
+        display: none;
+    }
+
+    .rightSection{
+        width: 100%;
+    }
+
+    .ulListItem a{
+        font-size: 12px;
+    }
+    
+    .ulListItem a:active{
+        color: #cfde5e;
+        transform: scale(1.1);
+    }
+    
+}
+
+@media (max-width:650px) {
+    
+    /* Styling for footer section */
+
+    .signUp h2{
+        font-size: 20px;
+    }
+
+    .goUp h2{
+        font-size: 20px;
+    }
+
+    .tutorialFor h2{
+        font-size: 20px;
+    }
+    
+    .signUpLabel{
+        font-size: 14px;
+    }
+    
+    .signUpInputTag{
+        border-radius: 5px;
+        padding: 2px 5px;
+        font-size: 14px;
+        width: 200px;
+        margin: 5px 0px;
+    }
+    
+    .goUp a{
+        font-size: 14px;
+        margin: 3px 0px;
+    }
+    
+    .rightTutorialFor a{
+        font-size: 14px;
+        margin: 3px 0px;
+    }
+
+    .leftTutorialFor a{
+        font-size: 14px;
+        margin: 3px 0px;
+    }
+
+}
+
+@media (max-width:550px) {
+    
+    /* Styling for footer section */
+    
+    .signUpTable{
+        border-collapse: separate;
+        border-spacing: 0px 5px;
+    }
+
+    .signUpTableRow{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .signUpLabel{
+        padding-left: 5px; 
+    }
+
+    .signUpInputTag{
+        width: 250px;
+        padding: 5px;
+        border-radius: 0px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+    .signUpInputTag:hover{
+        outline: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .signUpInputTag:active {
+        outline: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .goUp a{
+        margin: 5px 0px;
+    }
+    
+    .rightTutorialFor a{
+        font-size: 14px;
+        margin: 5px 0px;
+    }
+
+    .leftTutorialFor a{
+        font-size: 14px;
+        margin: 5px 0px;
+    }
+
+    .signUp h2{
+        font-size: 18px;
+    }
+
+    .goUp h2{
+        font-size: 18px;
+    }
+
+    .tutorialFor h2{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    /* Styling for footer section */
+
+    .topDivInsideFooter{
+        flex-direction: column;
+    }
+
+    .signUp{
+        width: 100%;
+    }   
+
+    .signUpInputTag{
+        width: 80vw;
+    }
+    
+    .goToAndTutorialFordiv{
+        width: 100%;
+    }
+
+    .goUp{
+        width: 40%;
+    }
+
+    .tutorialFor{
+        width: 60%;
+    }
+
+    .leftrightTutorialFor{
+        flex-direction: row;
+    }
+
+    /* medial link div styling */
+
+    .mediaLink{
+        margin: 50px 0px 10px 0px;
+    }
+
+
+    /* style for terms and condition and privacy policy */
+
+    .termsAndCondition h2{
+        font-size: 18px;
+    }
+
+    .privacyPolicy h2{
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width:400px) {
+    /* style for terms and condition and privacy policy */
+
+    .termsAndConditionAndPrivacyPolicy{
+        align-items: flex-start;
+    }
+
+    .termsAndCondition{
+        width: 55%;
+    }
+
+    .privacyPolicy{
+        width: 45%;
+    }
+
+    .termsAndCondition h2{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .privacyPolicy h2{
+        align-items: center;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:330px) {
+    .goUp{
+        width: 35%;
+    }
+
+    .tutorialFor{
+        width: 65%;
+    }
+
+    .leftTutorialFor a{
+        font-size: 13px;
+    }
+
+    .rightTutorialFor a{
+        font-size: 13px;
+    }
+
+    /* style for terms and condition and privacy policy */
+
+    .termsAndConditionAndPrivacyPolicy{
+        align-items: flex-start;
+    }
+
+    .termsAndCondition{
+        width: 55%;
+    }
+
+    .privacyPolicy{
+        width: 45%;
+    }
+
+    .termsAndCondition h2{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .privacyPolicy h2{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .termsAndCondition p{
+        font-size: 14px;
+    }
+
+    .privacyPolicy p{
+        font-size: 14px;
+    }
+}

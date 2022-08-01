@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome In CidingTutorial</title>
+    <link rel="icon" href="Images/CodingTutorialLogo6.png" type="image/icon" style="border-radius: 50%;">
+
+    <!-- css page link -->
+
+    <link rel="stylesheet" href="homePageNavigationnDesign.css">
+    <link rel="stylesheet" href="homePageMainTagDesign.css">
+    <link rel="stylesheet" href="searchBarDesignForHomePage.css">
+
+    
+    <!-- Link Of Icons -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+     <!-- Font Awesome Link -->
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- AOS CDN Link -->
+
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <header id="headerTag">
+
+        <div class="round" id="roundId">
+
+        </div>
+
+        <nav class="navigationTag">
+            <div class="titleDiv" id="titleDivId">
+
+                <div class="headingImgText">
+                    <img src="Images/CodingTutorialLogo6.png" alt="Logo" class="headingIconLogo">
+                    <h1>CodingTutorial</h1>
+                </div>
+
+                <div class="searchSection">
+                    <input type="text" name="searchText" placeholder="Search Here" id="searchText"  onclick="searchTextClicked()" onkeyup="inputTextKeyDownToDiaplySearchList()">
+                    <span class="material-symbols-outlined" id="searchIcon" onclick="laptopSearchIconclicked()">search</span>
+                </div>
+
+                <div class="serchIconForMobile">
+                    <span class="material-symbols-outlined" id="sIconForMobile" onclick="searchIconForMobile()">search</span>
+                </div>
+
+            </div>    
+        </nav>
+    </header>
+
+    <div class="searchSectionForMobile" id="searchSectionForMobileId">
+        <input type="text" name="search" placeholder="Search Here" id="searchInputBox" onkeyup="searchTextForMobileClicked()">
+        <input type="button" name="searchButton" value="Search" id="searchButton" onclick="laptopSearchIconclicked()">
+    </div>
+
+    <!-- Search List Panel For Laptop -->
+
+    <div class="searchListForLaptop" id="searchListForLaptopId">
+        <ul class="unorderdSearchListForLaptop">
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">tata</a></li>
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">fortuner</a></li>
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">mahindra</a></li>
+            <li class="searchListItem"><a href="" class="searchListItemAnchor">Maruti</a></li>
+        </ul>
+    </div>
+
+    <main class="mainSectionOfPage" id="mainSectionOfPageId" onscroll="mainTagScrolledToHideSerchList()">
+    
+        <div class="scrollingNavigationSection" id="scrollingNavigationSectionId">
+    
+            <a href="c_LanguageIntroduction.html" class="navItemDiv">
+                <i class="fa-solid fa-copyright"></i>
+                <p>C</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-solid fa-copyright"></i>
+                <p>C++</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-python"></i>
+                <p>Python</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-html5"></i>
+                <p>HTML</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-css3"></i>
+                <p>CSS</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-js"></i>
+                <p>JavaScript</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-php"></i>
+                <p>PHP</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-brands fa-android"></i>
+                <p>Android</p>
+            </a>
+    
+            <a href="#" class="navItemDiv">
+                <i class="fa-solid fa-database"></i>
+                <p>SQL</p>
+            </a>
+        </div>
+    
+        <div class="displaySection">
+            <div class="welcoming">
+                <h1>Welcome In CodingTutorial..!</h1>
+            </div>
+    
+            <div class="pickUpLine">
+                <p>My love about coding cannot be measured with an int, not with a long, and not even with an array. It is
+                    out of bounds and infinite.</p>
+                <p id="compilerPickUp">I think coding is my compiler. My life wouldn’t start without it.</p>
+            </div>
+        </div>
+
+        <div class="subMenues">
+            <a href="#rateUsSection"><button type="button" id="rateUs">Rate Us</button></a>
+            <a href="#aboutSectionDemoId"><button type="button" id="about">About</button></a>
+            <a href="#signUpId"><button type="button" id="login">Login</button></a>
+        </div>
+
+        <div class="tutorialServices">
+            <h1>Tutorial For</h1>
+        </div>
+
+        <div class="animationSideDivDisplay" id="animationSideDivDisplayId">
+            <div class="leftAnimationDiv" id="leftAnimationDivId">
+                <a href="c_LanguageIntroduction.html" class="leftSlideSubDiv" id="cLeftSlideDiv">
+                    <p>C is simple portable and easy to use.This tutorial contains all basic to advance concept of C Language such as Variable,Structure,Arry,Pointer etc.</p>
+                    <div class="lefticon">
+                        <i class="fa-solid fa-copyright"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftSlideSubDiv" id="javaLeftSlideDiv">
+                    <p>Java is used for software designing,web application,games and also used as a backend in android. This tutorial contains all concepts of java with easy to undestand way.</p>
+                    <div class="lefticon">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftSlideSubDiv" id="htmlLeftSlideDiv">
+                    <p>HTML is a markup language and it is used on client side for user interface.This tutorial contains all Tags that are used in and deep detail about it with example.</p>
+                    <div class="lefticon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftSlideSubDiv" id="javaScriptLeftSlideDiv">
+                    <p>JavaScript is a scripting language, It is different from java.It used with html page to make it more responsive, it contains all logic of the user.</p>
+                    <div class="lefticon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftSlideSubDiv" id="androidLeftSlideDiv">
+                    <p>Android is a linux based programing language which is developed by google to make the android application.This tutorial contains beggining to advance concept of Android.</p>
+                    <div class="lefticon">
+                        <i class="fa-brands fa-android"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="rightAnimationDiv">
+                <a href="#" class="rightSlideSubDiv" id="cplusRightSlideDiv">
+                    <div class="righticon">
+                        <i class="fa-solid fa-copyright"></i>
+                    </div>
+                    <p>C++ is advance version of C language.The limitations and difficulty of C lang is minimized in C++. This tutorial contains all these changes.</p>
+                </a>
+                
+                <a href="#" class="rightSlideSubDiv" id="pythonRightSlideDiv">
+                    <div class="righticon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <p>Python is machine learning programing language.It simple and portable language which is used for heavy project.This tutorial contains basic to advance about python.</p>
+                </a>
+                
+                <a href="#" class="rightSlideSubDiv" id="cssRightSlideDiv">
+                    <div class="righticon">
+                        <i class="fa-brands fa-css3"></i>
+                    </div>
+                    <p>CSS is used for designing to html component on the webpage.The look of the website is totaly depends on the css.This tutorial contains detail information of all properties of css.</p>
+                </a>
+                
+                <a href="#" class="rightSlideSubDiv"  id="phpRightSlideDiv">
+                    <div class="righticon">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <p>PHP is server side scripting language which is mainly used for validating page on server side and other server side working.This tutorial contains all about php.</p>
+                </a>
+
+                <a href="#" class="rightSlideSubDiv"  id="sqlRightSlideDiv">
+                    <div class="righticon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <p>SQL is database used to store the data of the user from different platform.this tutorial contains all queries of database.</p>
+                </a>
+                
+            </div>
+
+            <!-- Animation Division ForMobile -->
+
+            <div class="animationSlideDivForMobile">
+                <a href="c_LanguageIntroduction.html" class="rightIconSlideSubDiv" id="cSlideDiv">
+                    <p>C is simple portable and easy to use.This tutorial contains all basic to advance concept of C Language such as Variable, Structure, Arry, Pointer etc.</p>
+                    <div class="langIcon">
+                        <i class="fa-solid fa-copyright"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftIconSlideSubDiv" id="cplusSlideDiv">
+                    <div class="langIcon">
+                        <i class="fa-solid fa-copyright"></i>
+                    </div>
+                    <p>C++ is advance version of C language.The limitations and difficulty of C lang is minimized in C++. This tutorial contains all these changes.</p>
+                </a>
+
+                <a href="#" class="rightIconSlideSubDiv" id="javaSlideDiv">
+                    <p>Java is used for software designing,web application,games and also used as a backend in android. This tutorial contains all concepts of java with easy to undestand way.</p>
+                    <div class="langIcon">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftIconSlideSubDiv" id="pythonSlideDiv">
+                    <div class="langIcon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <p>Python is machine learning programing language.It simple and portable language which is used for heavy project.This tutorial contains basic to advance about python.</p>
+                </a>
+
+                <a href="#" class="rightIconSlideSubDiv" id="htmlSlideDiv">
+                    <p>HTML is a markup language and it is used on client side for user interface.This tutorial contains all Tags that are used in html page and deep detail about it with example.</p>
+                    <div class="langIcon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftIconSlideSubDiv" id="cssSlideDiv">
+                    <div class="langIcon">
+                        <i class="fa-brands fa-css3"></i>
+                    </div>
+                    <p>CSS is used for designing to html component on the webpage.The look of the website is totaly depends on the css.This tutorial contains detail information of all properties of css.</p>
+                </a>
+
+                <a href="#" class="rightIconSlideSubDiv" id="javaScriptSlideDiv">
+                    <p>JavaScript is a scripting language, It is different from java.It used with html page to make it more responsive, it contains all logic of the user.</p>
+                    <div class="langIcon">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftIconSlideSubDiv"  id="phpSlideDiv">
+                    <div class="langIcon">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <p>PHP is server side scripting language which is mainly used for validating page on server side and other server side working.This tutorial contains all about php.</p>
+                </a>
+
+                <a href="#" class="rightIconSlideSubDiv" id="androidSlideDiv">
+                    <p>Android is a linux based programing language which is developed by google to make the android application.This tutorial contains beggining to advance concept of Android.</p>
+                    <div class="langIcon">
+                        <i class="fa-brands fa-android"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="leftIconSlideSubDiv"  id="sqlSlideDiv">
+                    <div class="langIcon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <p>SQL is database used to store the data of the user from different platform.this tutorial contains all queries of database.</p>
+                </a>         
+            </div>
+        </div>
+
+        <div class="rateUsSection" id="rateUsSection">
+
+            <div class="tableDivision">
+
+                <h1 class="rateUseHeading">Your Feedback</h1>
+
+                <table>
+                    <tr>
+                        <td>
+                            <label>Full Name</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" placeholder="Full Name" required autocomplete="off" id="full_name" class="rateUsInput" onkeyup="nameFunction()">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label id="fName" class="warning"></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Email</label>
+                        </td>
+                        <td>
+                            <input type="email" name="mail" placeholder="Email Here" required autocomplete="off" id="emailAdd" class="rateUsInput" onkeyup="emailFunction()">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label id="email" class="warning"></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Mob. No</label>
+                        </td>
+                        <td>
+                            <input type="number" name="mobile" placeholder="Mobile Number" required autocomplete="off" id="mobileNo" class="rateUsInput" onkeyup="mobileFunction()">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label id="mobile" class="warning"></label>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="stars">
+
+                    <span class="material-symbols-outlined" id="starSize1" onclick="star1()">
+                        grade
+                    </span>
+
+                    <span class="material-symbols-outlined" id="starSize2" onclick="star2()">
+                        grade
+                    </span>
+
+                    <span class="material-symbols-outlined" id="starSize3" onclick="star3()">
+                        grade
+                    </span>
+
+                    <span class="material-symbols-outlined" id="starSize4" onclick="star4()">
+                        grade
+                    </span>
+
+                    <span class="material-symbols-outlined" id="starSize5" onclick="star5()">
+                        grade
+                    </span>
+
+                </div>
+                <label id="starLabel" class="warning"></label>
+
+                <textarea name="textarea" id="textarea1" cols="30" rows="6" required autocomplete="off" onkeyup="responseFunction()">It's Amazing...</textarea>
+                <label id="textAreaLabel" class="warning"></label>
+
+                <input type="button" name="submit" value="Send" id="submitButton" onclick="thankingDialog()">
+            </div>
+
+            <div id="thankingDemo">
+                <div class="thanking">
+                    <span class="material-symbols-outlined" id="smileIcon">
+                        sentiment_satisfied
+                    </span>
+    
+                    <h1 id="thanksHeadingSuccess">Thank You...!</h1>
+    
+                    <button type="text" class="sendBtn" onclick="thankingOkButtonClicked()">OK</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="aboutSectionDemo" id="aboutSectionDemoId">
+            <div class="aboutSection">
+                <div class="devloperImages">
+                    <p id="devloperHeading">Designer, Developer & Bug Finder</p>
+                    <div class="images" id="imagesId">
+                        <img src="Images/bg1.webp" alt="bg1">
+                        <img src="Images/bg3.jpeg" alt="bg2">
+                        <img src="Images/bg4.jpeg" alt="bg3">
+                        <img src="Images/bg5.webp" alt="bg4">
+                        <!-- This image is not visible on screeen due to technical reasond -->
+                        <img src="Images/bg6.webp" alt="bg5">
+                    </div>
+                    <p>Sambhaji Shinde</p>
+                </div>
+                <div class="information">
+                    <p class="informationText">
+                        &nbsp; &nbsp; &nbsp; &nbsp;Hi guys... I am Sambhaji Shinde Engineering Student in Information Technology.I gave you tutorials about some important computer programing languages such as C,C++,Java,Paython...etc.The language used in this tutorial is easy to understand with examples and output that means a fresher can understand it without any difficulty.It also contains IDE of each language to practice the other examples.The video output helps to programer for better understanding the concept.This website is the set of all important programing language.Each and every tutorial contains basic to advance concept of the languages that means a fresher and programer can use this site to learn and find something during programing.
+                        <br>
+                        <br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The UI of this website is very user friendly.When you will visit this website first time you can see the automatic sliding navigation bar, you can slide it manually by clicking on languages you can go to the tutorial of that languages directly.When you go in tutorial you will see the the logo and search bar and navigation bar by using search bar you can search you want you can use totorial to shift from one tutorial to other tutorial.When you click home nav you come back to the main page of this website.After sliding navigation on main page you will see the welcoming after it you hav a tutorial for section it also shift you to tutorial of that perticular language.After it you see the feedback section by using it tou can give me the your opinion about this website also by use it you can contact me.Next you will see the developer section and footer section, In footer section you have some links of my social media,tutorials,terms & condition,privacy policyand login.This is about this website. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerSection">
+            <div class="topDivInsideFooter">
+
+                <div class="signUp" id="signUpId">
+
+                    <h2 id="signUpHeading">Sign Up</h2>
+
+                    <table class="signUpTable">
+
+                        <tr class="signUpTableRow">
+                            <td>
+                                <label class="signUpLabel">Name</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Full Name" id="signUpName" class="signUpInputTag" onkeyup="signUpNamefunction()">
+                            </td>
+                        </tr>
+                        <tr class="signUpTableRow">
+                            <td></td>
+                            <td>
+                                <label class="signUpWarning" id="signUpNameWarning"></label>
+                            </td>
+                        </tr>
+
+                        <tr class="signUpTableRow">
+                            <td>
+                                <label class="signUpLabel">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" placeholder="Email-Id" id="signUpEmail" class="signUpInputTag" onkeyup="signUpEmailfunction()">
+                            </td>
+                        </tr>
+                        <tr class="signUpTableRow">
+                            <td></td>
+                            <td>
+                                <label class="signUpWarning" id="signUpEmailWarning"></label>
+                            </td>
+                        </tr>
+
+                        <tr class="signUpTableRow">
+                            <td>
+                                <label class="signUpLabel">Mobile</label>
+                            </td>
+                            <td>
+                                <input type="number" placeholder="Mobile-No" id="signUpMobile" class="signUpInputTag" onkeyup="signUpMobilefunction()">
+                            </td>
+                        </tr>
+                        <tr class="signUpTableRow">
+                            <td></td>
+                            <td>
+                                <label class="signUpWarning" id="signUpMobileWarning"></label>
+                            </td>
+                        </tr>
+
+                        <tr class="signUpTableRow">
+                            <td>
+                                <label class="signUpLabel">Address</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Full Address" id="signUpAddress" class="signUpInputTag" onkeyup="signUpAddressfunction()">
+                            </td>
+                        </tr>
+                        <tr class="signUpTableRow">
+                            <td></td>
+                            <td>
+                                <label class="signUpWarning" id="signUpAddressWarning"></label>
+                            </td>
+                        </tr>
+
+                        <tr class="signUpTableRow">
+                            <td>
+                                <label class="signUpLabel">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" placeholder="Password" id="signUpPassword" class="signUpInputTag" onkeyup="signUpPasswordfunction()">
+                            </td>
+                        </tr>
+                        <tr class="signUpTableRow">
+                            <td></td>
+                            <td>
+                                <label class="signUpWarning" id="signUpPasswordWarning"></label>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <input type="button" value="Submit" id="signUpSubmitButton" onclick="signUpSubmitFunction()">
+
+                </div>
+
+                <div class="goToAndTutorialFordiv">
+                    <div class="goUp">
+                        <h2>Click Me</h3>
+                        <a href="#">Home</a>
+                        <a href="#">Tutorial For</a>
+                        <a href="#">Feedback</a>
+                        <a href="#">About</a>
+                        <a href="#">Public Opinion</a>
+                    </div>
+
+
+                    <div class="tutorialFor">
+
+                        <h2>Tutorial For</h2>
+
+                        <div class="leftrightTutorialFor">
+                            <div class="leftTutorialFor">
+                                <a href="#">C lang</a>
+                                <a href="#">java</a>
+                                <a href="#">C++</a>
+                                <a href="#">Python</a>
+                                <a href="#">HTML</a>
+                            </div>
+                            <div class="rightTutorialFor">
+                                <a href="#">CSS</a>
+                                <a href="#">JavaScript</a>
+                                <a href="#">PHP</a>
+                                <a href="#">Android</a>
+                                <a href="#">SQL Database</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="mediaLink">
+                <a href="#"><i class="fa-brands fa-twitter twitterIcon"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram instagramIcon"></i></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f facebookIcon"></i></a>
+            </div>
+            
+            <div class="fotterIconLogAndName">
+                <div class="roundLogoBorder">
+                    <img src="Images/CodingTutorialLogo6.png" alt="logo">
+                </div>
+                <h1>CodingTutorial</h1>
+                <p>Copyright © CodingTutorial 2022 for developers and begginers in coding</p>
+                <p>Developed By : Sambhaji Sitaram Shinde (Engineering Student Of Information Technology)</p>
+            </div>
+
+            <div class="termsAndConditionAndPrivacyPolicy">
+
+                <div class="termsAndCondition">
+                    <h2>Terms & Condition</h2>
+                    <p>
+                        This website do not gives any permition to use any content of this website on public level it may be copy.
+                    </p>
+                </div>
+
+                <div class="privacyPolicy">
+                    <h2>Privacy Policy</h2>
+                    <p>
+                        The Feedback And Login Data is secure and protected.This data reaches only to its authorized user. 
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    
+    </main>
+
+    <script src="homePageScript.js"></script>
+    <script src="searchBarScriptForHomePage.js"></script>
+
+</body>
+</html>

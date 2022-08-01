@@ -1,0 +1,713 @@
+/* Edu TAS Beginner */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+TAS+Beginner&family=Inter:wght@300&family=Merriweather:wght@700&family=Nunito:ital,wght@1,200&family=Updock&display=swap');
+
+/* font family for Caveat, Edu TAS Beginner, Inter, Merriweather, Nunito, Roboto Condensed, Updock, Lora*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+TAS+Beginner&family=Inter:wght@300&family=Lora&family=Merriweather:wght@700&family=Nunito:ital,wght@1,200&family=Roboto+Condensed:wght@300&family=Updock&display=swap');
+
+
+:root{
+    --body-color: #e9edc9;
+    --border-color: #2a9d8f;
+    --navigationbg-color: #c9cba3;
+    --navItem-color: black;
+    --searchBoxBg-color:  #c9cba3;
+    --searchButton-color: black;
+    --shadow-color: rgb(0, 200, 255);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--body-color);
+}
+
+header{
+    width: 100vw;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+
+    transition-property: height;
+    transform-origin: top;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+.navigationSection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    /* padding-top: 1vw; */
+    width: 100%;
+    height: 95px;
+    display: flex;
+    align-items: center;
+}
+
+/* Title code */
+
+.title{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.headingIcon{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 1.1vw 0px 1vw;
+    border: 2px solid var(--border-color);
+}
+
+.title h1{
+    font-family: 'Edu TAS Beginner', cursive;
+    cursor: pointer;
+    height: 50px;
+    font-size: 35px;
+}
+
+/* Hamburger Code */
+
+.hamBurgerDemo{
+    overflow: hidden;
+    display: none;
+    height: 100%;
+    width: 20%;
+}
+
+.hamBurger{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.burger{
+    width: 40px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#line1{
+    width: 100%;
+    height: 5px;
+    background-color: var(--navItem-color);
+    border-radius: 10px;
+
+    transform: rotate(0deg);
+    transform-origin: right;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+#line2{
+    width: 100%;
+    height: 5px;
+    background-color: var(--navItem-color);
+    border-radius: 10px;
+
+    transform: translateX(0px);
+    transition-property: transform;
+    transform-origin: left;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#line3{
+    width: 100%;
+    height: 5px;
+    background-color: var(--navItem-color);
+    border-radius: 10px;
+
+    transform: rotate(0deg);
+    transform-origin: right;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.click #line1{
+    transform: rotate(-45deg) translateY(-6px);
+    transform-origin: right;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.click #line2{
+    transform: translateX(50px);
+    transition-property: transform;
+    transform-origin: left;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    
+}
+
+.click #line3{
+    transform: rotate(45deg) translateY(6px);
+    transform-origin: right;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+/* Custom Search Icon for Maobile */
+
+.sIconForMobile{
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: right;
+    width: 20%;
+    height: 100%;
+}
+
+#searchIconCustom{
+    font-size: 35px;
+    cursor: pointer;
+    margin: 0px 14px 0px 0vw;
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#searchIconCustom:hover{
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+}
+
+#searchIconCustom:active{
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* Code For SearchBox */
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 40%;
+    height: 100%;
+}
+
+#searchText{
+    cursor: pointer;
+    width: 5%;
+    height: 30px;
+    text-align: left;
+    font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-family: 'Inter',cursive;
+
+    transition: width;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+#searchText:hover{
+    width: 60%;
+    transition: width;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.search#searchText{
+    width: 60%;
+} 
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+#searchIcon{
+    font-size: 35px;
+    cursor: pointer;
+    margin: 0px 1vw 0px 1vw;
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#searchIcon:hover{
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+}
+
+#searchIcon:active{
+    background-color: white;
+    transform: scale(1.1);
+}
+
+
+/* hand animation on navigation */
+
+.handIcon{
+    font-size: 0px;
+}
+
+
+/* Language name div */
+
+.navigationItem{
+    overflow-x: scroll;
+    width: 100vw;
+    height: 96.88px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: var(--navigationbg-color);
+    position: relative;
+}
+
+.navigationItem::-webkit-scrollbar{
+    width: 0px;
+}
+
+.navigationItem::-webkit-scrollbar-thumb{
+    width: 0px;
+}
+
+.navigationItem::-webkit-scrollbar-track{
+    width: 0px;
+}
+
+.navigationIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 9vw;
+    min-width: 100px;
+    height: 100%;
+    background-color: var(--navigationbg-color);
+    text-decoration: none;
+    color: var(--navItem-color);
+    font-family: 'Inter',cursive;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navigationIcon:hover{
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.navigationIcon:active{
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.navigationIcon i{
+    padding: 5px;
+    font-size: 30px;
+    background-color: var(--navigationbg-color);
+}
+
+.navigationIcon p{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    font-size: 16px;
+    font-family: 'Inter',cursive;
+    background-color: var(--navigation-color);
+}
+
+
+
+
+/* Styling Search For Mobile */
+
+.mobileSearchText{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+    background-color: var(--searchBoxBg-color);
+    height: 35px;
+}
+
+.searchTextMobile{
+    cursor: pointer;
+    padding: 4px 6px;
+    width: 60%;
+    margin-right: 2vw;
+    border-radius: 9px;
+    font-size: 16px;
+    background-color: var(--searchBoxBg-color);
+    outline: none;
+    border: 2px solid #032143;
+    color:var(--searchButton-color);
+}
+
+.searchButton{
+    cursor: pointer;
+    padding: 4px 6px;
+    font-size: 14px;
+    border-radius: 9px;
+    background-color: var(--searchBoxBg-color);
+    border: 2px solid var(--searchButton-color);
+    color:var(--searchButton-color);
+}
+
+.searchButton:active{
+    background-color: #909549;
+    border: 2px solid aqua;
+}
+
+
+/* Hand Icon On slide division */
+
+.handIconOnSlideDivision{
+    display: flex;
+    position: absolute;
+    right: 50%;
+    bottom: 40%;
+    font-size: 0px;
+    color: #611ead;
+    background-color: var(--navigationbg-color);
+
+    animation-name: handOnSlideDivision;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes handOnSlideDivision {
+    100%{
+        transform: translateY(-100px);
+    }
+}
+
+
+/* HamBurger Extra Panel */
+
+.slideDivision{
+    position: relative;
+    width: 100vw;
+    height: 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--navigationbg-color);
+    overflow-y: scroll;
+    /* border-bottom: 2px solid black; */
+    z-index: 51;
+
+    transition-property: height;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+
+.slideDivision::-webkit-scrollbar{
+    width: 2px;
+}
+
+.slideDivision::-webkit-scrollbar-track{
+    background-color: #7c8a0a;;
+    width: 2px;
+    height: 0px;
+}
+
+.slideDivision::-webkit-scrollbar-thumb{
+    background-color: #bdc869;
+    width: 2px;
+    height: 0px;
+}
+
+
+
+
+
+
+
+/* media query for hand animation */
+
+@media (max-width:1100px) {
+    #searchText{
+        width: 6%;
+    }
+
+    #searchText:hover{
+        width: 80%;
+    }
+
+    .search#searchText{
+        width: 80%;
+    } 
+}
+
+@media (max-width:1032px) {
+
+    /* Hand Icon To Indicate Scroll */
+
+    .handIcon{
+        display: flex;
+        position: absolute;
+        right: 38%;
+        bottom: 0;
+        font-size: 25px;
+        color: #611ead;
+        background-color: var(--navigationbg-color);
+
+        animation-name: hand;
+        animation-timing-function: ease;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+
+    @keyframes hand {
+        100%{
+            transform: translateX(-180px);
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .handIcon{
+        right: 35%;
+    }
+}
+
+@media (max-width:500px) {
+    .handIcon{
+        right: 30%;
+    }
+}
+
+@media (max-width:400px) {
+    .handIcon{
+        right: 27%;
+    }
+}
+
+@media (max-width:350px) {
+    .handIcon{
+        right: 20%;
+    }
+}
+
+@media (max-width:260px) {
+    .handIcon{
+        right: 14%;
+    }
+}
+
+/* Media query for navigation */
+
+@media (max-width:800px) {
+
+    .title{
+        width: 70%;
+    }
+
+    .searchBar{
+        display: none;
+    }
+
+    .hamBurgerDemo{
+        display:block;
+        width: 10%;
+    }
+
+    /* Custom search Icon */
+    .sIconForMobile{
+        display: flex;
+        width: 20%;
+    }
+
+
+    /* code to display input text and button when use click on search icon for mobile */
+
+    .mobileSearchText {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0px 5px 0px;
+        background-color: var(--searchBoxBg-color);
+    }
+
+    .searchTextMobile {
+        padding: 4px 6px;
+        width: 60%;
+        margin-right: 2vw;
+        border-radius: 9px;
+        font-size: 16px;
+        background-color: var(--searchBoxBg-color);
+        outline: none;
+        border: 2px solid #032143;
+        color: var(--searchButton-color);
+    }
+
+    .searchButton {
+        padding: 4px 6px;
+        font-size: 14px;
+        border-radius: 9px;
+        background-color: var(--searchBoxBg-color);
+        border: 2px solid var(--searchButton-color);
+        color: var(--searchButton-color);
+    }
+
+    .searchButton:active {
+        background-color: #909549;
+        border: 2px solid aqua;
+    }
+
+}
+
+@media (max-width:630px) {
+
+    .title{
+        width: 65%;
+    }
+
+    .hamBurgerDemo{
+        width: 15%;
+    }
+
+    .sIconForMobile{
+        width: 20%;
+    }
+}
+
+@media (max-width:400px) {
+
+    /* title style */
+    
+    .title{
+        width: 65%;
+    }
+
+    .headingIcon{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .title h1{
+        height: 43px;
+        font-size: 30px;
+    }
+
+    /* ham burger style */
+
+    .hamBurgerDemo{
+        width: 15%;
+    }
+
+    
+    .burger{
+        width: 30px;
+        height: 20px;
+    }
+    
+    #line1{
+        height: 4px;
+    }
+    
+    #line2{
+        height: 4px;
+    }
+    
+    #line3{
+        height: 4px;
+    }
+    
+    .click #line1{
+        transform: rotate(-45deg) translateY(-4px);
+    }
+    
+    .click #line2{
+        transform: translateX(50px);
+    }
+    
+    .click #line3{
+        transform: rotate(45deg) translateY(4px);
+    }
+
+    /* Search icon style */
+
+    .sIconForMobile{
+        width: 20%;
+    }
+
+    #searchIconCustom{
+        font-size: 30px;
+        margin: 0px 5px 0px 0vw;
+        padding: 2px;
+    }
+
+
+}
+
+
+@media (max-width:330px) {
+
+    .title{
+        width: 65%;
+    }
+
+    .burger{
+        width: 30px;
+        height: 20px;
+        padding: 5px;
+    }
+
+    .hamBurgerDemo{
+        width: 15%;
+    }
+
+    .sIconForMobile{
+        width: 20%;
+    }
+
+    .headingIcon{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .title h1{
+        height: 35px;
+        font-size: 25px;
+    }
+
+    #searchIconCustom{
+        font-size: 25px;
+        padding: 2px;
+    }
+}

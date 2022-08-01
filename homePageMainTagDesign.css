@@ -1,0 +1,2736 @@
+/* index Page Main tag styling */
+
+.mainSectionOfPage{
+    width: 100vw;
+    height: 86.6vh;
+    background-color: white;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.mainSectionOfPage::-webkit-scrollbar{
+    width: 0px;
+}
+
+/* scrolling navigation section styling */
+
+.scrollingNavigationSection{
+    margin: 80px 0px 40px 0px;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.scrollingNavigationSection::-webkit-scrollbar{
+    width: 0px;
+}
+
+.scrollingNavigationSection::-webkit-scrollbar-thumb{
+    width: 0px;
+}
+
+.scrollingNavigationSection::-webkit-scrollbar-track{
+    width: 0px;
+}
+
+.navItemDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    min-width: 200px;
+    margin: 5px 15px;
+    cursor: pointer;
+    color: var(--navItem-color);
+    font-family: 'Inter',cursive;
+    text-decoration: none;
+    /* border: 2px solid black; */
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+    border-radius: 30px;
+}
+
+.navItemDiv:hover{
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.navItemDiv:active{
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.navItemDiv::before{
+    content: "click OR Scroll";
+    font-family: 'Inter',cursive;
+    font-size: 18px;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+
+    transform: translateY(-101%);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.navItemDiv:hover::before{
+    z-index: 1;
+    transform: translateY(0%);
+    transition-property: transform;
+    transition-delay: 0.6;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.navItemDiv i{
+    padding: 5px;
+    font-size: 80px;
+    background-color: var(--navigationbg-color);
+}
+
+.navItemDiv p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Inter',cursive;
+    background-color: var(--navigation-color);
+}
+
+
+/* Welcome text division */
+
+.displaySection{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcoming{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+}
+
+.welcoming h1{
+    position: relative;
+    font-size: 30px;
+    font-family: 'Inter', cursive;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.welcoming h1::after{
+    content:"|";
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+    animation-name: barScroll;
+    animation-delay: 1s;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes barScroll {
+    100%{
+        transform: translateX(100%);
+        transform-origin: right;
+    }
+}
+
+.pickUpLine{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pickUpLine p{
+    margin: 0px 10px;
+    font-size: 18px;
+    font-family: 'Krub', cursive;
+    cursor: pointer;
+    padding: 3px;
+    text-align: center;
+}
+
+#compilerPickUp{
+    padding-top: 6px;
+    text-align: center;
+}
+
+
+
+
+
+/* Styling for SubMenues (Login,contact,about,rateus) these Submenues */
+
+.subMenues{
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about{
+    text-align: center;
+    padding: 7px 24px;
+}
+
+#login{
+    text-align: center;
+    padding: 7px 24px;
+}
+
+.subMenues button{
+    font-size: 16px;
+    font-family: 'Inter', cursive;
+    font-weight: bold;
+    padding: 7px 15px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    margin: 30px;
+    text-align: center;
+}
+
+.subMenues button:hover{
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #1e9bff;
+    color: #2382d0;
+    box-shadow: 0px 0px 20px 1px #1e9bff;
+}
+
+.subMenues button:active{
+    transform: scale(0.9);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #4c6172;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+
+
+
+
+/* Tutorial for title services */
+
+.tutorialServices{
+    margin-top: 60px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+}
+
+.tutorialServices h1{
+    font-size: 30px;
+    font-family: 'Inter', cursive;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+/*  style for Animated langauage div display */
+
+.animationSideDivDisplay{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 30px 0px;
+}
+
+
+
+
+
+.leftAnimationDiv{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftSlideSubDiv{
+    width: 100%;
+    height: 200px;
+    margin: 20px 10px 20px 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 0px 50px 50px 0px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+}
+
+.leftSlideSubDiv p{
+    width: 70%;
+    font-size: 16px;
+    font-family: 'Inter', cursive;
+    margin: 0px 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.lefticon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0px 0px 50px;
+    background-color: white;
+    height: 100%;
+    width: 30%;
+    font-size: 120px;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+}
+
+
+
+
+
+.rightAnimationDiv{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightSlideSubDiv{
+    width: 100%;
+    height: 200px;
+    margin: 20px 0px 20px 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 50px 0px 0px 50px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+}
+
+.righticon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 50px 50px 0px;
+    background-color: white;
+    height: 100%;
+    width: 30%;
+    font-size: 120px;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+}
+
+.rightSlideSubDiv p{
+    width: 70%;
+    font-size: 16px;
+    font-family: 'Inter', cursive;
+    margin: 0px 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+
+
+
+/* intersectionObserver on rightSlideSubDiv and leftSlideSubDiv */
+
+#cLeftSlideDiv{
+    transform: scale(0.1);
+    transform-origin: left; 
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#javaLeftSlideDiv{ 
+    transform: scale(0.1);
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#htmlLeftSlideDiv{
+    transform: scale(0.1);
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#javaScriptLeftSlideDiv{
+     transform: scale(0.1);
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#androidLeftSlideDiv{
+     transform: scale(0.1);
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#cplusRightSlideDiv{
+    transform: scale(0.1);
+    transform-origin: right;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#pythonRightSlideDiv{
+     transform: scale(0.1);
+    transform-origin: right;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#cssRightSlideDiv{
+     transform: scale(0.1);
+    transform-origin: right;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+#phpRightSlideDiv{
+     transform: scale(0.1);
+    transform-origin: right;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#sqlRightSlideDiv{
+    transform: scale(0.1);
+    transform-origin: right;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+/* Animation Slide Div Diaplay for mobile */
+
+.animationSlideDivForMobile{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 30px 0px;
+}
+
+.leftIconSlideSubDiv{
+    width: 90%;
+    height: 170px;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+
+    transform: scaleX(0.01);
+    transform-origin: right;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.rightIconSlideSubDiv{
+    width: 90%;
+    height: 170px;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+
+    transform: scaleX(0.01);
+    transform-origin: left;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.langIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    background-color: white;
+    height: 100%;
+    width: 25%;
+    font-size: 100px;
+    box-shadow: 0px 0px 10px 2px rgb(199, 175, 175);
+}
+
+.leftIconSlideSubDiv p{
+    width: 75%;
+    font-size: 16px;
+    font-family: 'Inter', cursive;
+    margin: 0px 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.rightIconSlideSubDiv p{
+    width: 75%;
+    font-size: 16px;
+    font-family: 'Inter', cursive;
+    margin: 0px 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+
+
+
+/* Styling of Rating and your Experience section */
+
+.rateUsSection{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 20px 0px 20px 0px;
+}
+
+.tableDivision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    background-color: transparent;
+    margin: 30px 0px;
+    box-shadow: 0px 0px 20px 2px rgb(157, 133, 133);
+    border-radius: 30px;
+}
+
+.rateUseHeading{
+    margin: 50px 0px 50px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+}
+
+label{
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    font-weight: bold;
+}
+
+.warning{
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    font-weight: bold;
+}
+
+.rateUsInput{
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: left;
+    background: transparent;
+    border: 2px solid balck;
+    font-size: 16px;
+    width: 300px;
+    color: rgb(48, 45, 45);
+    outline: none;
+    font-family: 'Inter', Courier;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.rateUsInput:hover{
+    border: 3px solid #2ec4b6;
+    box-shadow: 0px 0px 10px 1px #2ec4b6;
+    outline: none;
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.rateUsInput:active{
+    border: 3px solid #16697a;
+    box-shadow: 0px 0px 10px 1px #16697a;
+    outline: none;
+}
+
+.stars{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.stars span{
+    font-size: 50px;
+    margin: 0px 10px;
+}
+
+#textarea1{
+    width: 400px;
+    margin: 15px 0px;
+    background-color: transparent;
+    border: 2px solid black;
+    color: rgb(48, 45, 45);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 1vw;
+    color: black;
+    outline: none;
+    font-family: 'Inter', Courier;
+    cursor: pointer;
+}
+
+#textarea1:hover{
+    border: 3px solid #2ec4b6;
+    box-shadow: 0px 0px 10px 1px #2ec4b6;
+    outline: none;
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#textarea1:active{
+    border: 3px solid #16697a;
+    box-shadow: 0px 0px 10px 1px #16697a;
+    outline: none;
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#submitButton{
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 5px 0px;
+    width: 100px;
+    margin: 15px 0px 35px 0px;
+    outline: none;
+    font-family: 'Inter', Courier;
+    text-align: center;
+    background-color: transparent;
+}
+
+#submitButton:hover{
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #1e9bff;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+#submitButton:active{
+    transform: scale(0.9);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #4c6172;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+
+/* styling for thanking in rate us section */
+
+#thankingDemo{
+    display: none;
+    z-index: 10;
+}
+
+.thanking{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 420px;
+    height: 320px;
+    background-color: #7395AE;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 28%;
+    left: 35%;
+    margin: 0px auto;
+}
+
+#smileIcon{
+    font-size: 130px;
+    overflow: hidden;
+    cursor: pointer;
+    color: black;
+}
+
+.thanking h1{
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+}
+
+/* #badLuckIcon #thankHeading dinamicaly displays*/
+
+#badLuckIcon{
+    font-size: 100px;
+    padding-bottom: 20px;
+}
+
+#thankHeading{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.sendBtn{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid white;
+    color: #4b5e6f;
+    background-color: #0f2a43;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+}
+
+.sendBtn:hover{
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #1e9bff;
+    background-color: #1d3a52;
+    color: orange;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+    transform: scale(1.1);
+}
+
+.sendBtn:active{
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #4c6172;
+    background-color: #1f4a6d;
+    color: orange;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+
+
+
+
+/* About section of Index page */
+
+.aboutSectionDemo{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutSection{
+    width: 95%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 20px 0px 30px 0px;
+    box-shadow: 0px 0px 20px 2px rgb(157, 133, 133);
+    border-radius: 30px;
+}
+
+.devloperImages{
+    margin: 60px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#devloperHeading{
+    font-size: 30px;
+    font-family: 'Merriweather', Courier;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.devloperImages p{
+    font-size: 22px;
+    font-family: 'Inter', cursive;
+    cursor: pointer;
+}
+
+.images{  
+    margin-top: 12px;
+    width: 222px;
+    height: 236px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    transition-property: scroll-behavior;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.images::-webkit-scrollbar{
+    width: 0px;
+}
+
+.images img{
+    box-shadow: 0px 0px 5px 2px rgb(148, 125, 125);
+    max-width: 201px;
+    min-width: 200px;
+    max-height: 201px;
+    min-height: 200px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.information{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 10px 50px 60px 50px;
+}
+
+.informationText{
+    font-size: 16px;
+    font-family: 'Inter', cursive;
+    
+    text-align: justify;
+    line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer section for media */
+
+.footerSection{
+    background-color: #838b99;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-shadow: 0px 0px 20px 8px #717378;
+}
+
+
+/* first div inside footer section */
+
+.topDivInsideFooter{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.signUp{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#signUpHeading{
+    margin: 30px 0px 30px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    background-color: transparent;
+}
+
+.signUpTable{
+    background-color: #838b99;
+}
+
+.signUpTableRow{
+    background-color: #838b99;
+}
+
+.signUpTableRow td{
+    background-color: #838b99;
+}
+
+.signUpLabel{
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.signUpInputTag{
+    border-radius: 5px;
+    padding: 2px 10px;
+    text-align: left;
+    border: 2px solid black;
+    font-size: 16px;
+    width: 200px;
+    color: rgb(48, 45, 45);
+    outline: none;
+    font-family: 'Inter', Courier;
+    margin: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.signUpInputTag:hover{
+    border: 3px solid #2ec4b6;
+    box-shadow: 0px 0px 10px 1px #2ec4b6;
+    outline: none;
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.signUpInputTag:active{
+    border: 3px solid #16697a;
+    box-shadow: 0px 0px 10px 1px #16697a;
+    outline: none;
+}
+
+.signUpWarning{
+    color: rgb(121, 17, 17);
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#signUpSubmitButton{
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin: 15px 0px 35px 0px;
+    outline: none;
+    font-family: 'Inter', Courier;
+    text-align: center;
+    background-color: transparent;
+}
+
+#signUpSubmitButton:hover{
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #1e9bff;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+#signUpSubmitButton:active{
+    transform: scale(0.9);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid #4c6172;
+    color: #2382d0;
+    box-shadow: 0px 0px 40px 7px #1e9bff;
+}
+
+
+
+
+
+.goToAndTutorialFordiv{
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+
+
+
+.goUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.goUp h2{
+    margin: 30px 0px 30px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    background-color: transparent;
+}
+
+.goUp a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-decoration: none;
+    padding: 2px 0px;
+    margin: 5px 0px;
+    background-color: transparent;
+}
+
+.goUp a:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.goUp a:active{
+    border-bottom: 2px solid rgb(246, 53, 53);
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+.tutorialFor{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.leftrightTutorialFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.leftTutorialFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.rightTutorialFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.tutorialFor h2{
+    margin: 30px 0px 30px 0px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    background-color: transparent;
+}
+
+.leftTutorialFor a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-decoration: none;
+    padding: 2px 0px;
+    margin: 5px 0px;
+    background-color: transparent;
+}
+
+.leftTutorialFor a:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.leftTutorialFor a:active{
+    border-bottom: 2px solid rgb(246, 53, 53);
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.rightTutorialFor a{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-decoration: none;
+    padding: 2px 0px;
+    margin: 5px 0px;
+    background-color: transparent;
+}
+
+.rightTutorialFor a:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.1);
+    transition-property: all;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.rightTutorialFor a:active{
+    border-bottom: 2px solid rgb(246, 53, 53);
+    color: rgb(246, 53, 53);
+    transform: scale(1);
+    transition-property: transform;
+    transform-origin: center;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+/* Second div in footer section */
+
+.mediaLink{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mediaLink a{
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.twitterIcon{
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 25px;
+    border: 2px solid rgb(35, 2, 88);
+    margin: 5px;
+
+    animation-name: twitter;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes twitter {
+
+    100%{    
+        transform: scale(1.2);
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }  
+}
+
+.twitterIcon:hover{
+    transform: scale(0.9);
+    transform-origin: center;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+    animation: none;
+}
+
+.twitterIcon:active{
+    transform: scale(1);
+    border: 2px solid rgb(208, 36, 10);
+}
+
+.instagramIcon{
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 6px 7px;
+    margin: 5px 50px 2px 50px;
+    border: 2px solid rgb(35, 2, 88);
+
+    animation-name: instagram;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes instagram {
+
+    100%{    
+        transform: scale(1.2);
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.instagramIcon:hover{
+    transform: scale(0.9);
+    transform-origin: center;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+    animation: none;
+}
+
+.instagramIcon:active{
+    transform: scale(1);
+    border: 2px solid rgb(208, 36, 10);
+}
+
+.facebookIcon{
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 6px 11px;
+    border: 2px solid rgb(35, 2, 88);
+    margin: 5px;
+
+    animation-name: facebook;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes facebook {
+
+    100%{    
+        transform: scale(1.2);
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    } 
+}
+
+.facebookIcon:hover{
+    transform: scale(0.9);
+    transform-origin: center;
+    transition-property: transform;
+    transform-origin: center;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+    animation: none;
+}
+
+.facebookIcon:active{
+    transform: scale(1);
+    border: 2px solid rgb(208, 36, 10);
+} 
+
+
+
+
+
+/* fotter Icon Logo and heading  styling division */
+
+.fotterIconLogAndName{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.roundLogoBorder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+    /* border: 4px dotted #1abc9c; */
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+    margin: 30px 0px 10px 0px;
+
+    animation-name: samRoundAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes samRoundAnimation {
+    100%{
+        
+        transform: rotate(360deg);
+        transform-origin: center;
+
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.roundLogoBorder img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #020e18;
+
+    animation-name: samRound;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes samRound {
+    100%{
+        
+        transform: rotate(-360deg);
+        transform-origin: center;
+
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.fotterIconLogAndName h1{
+    margin: 5px 0px 30px 0px;
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.fotterIconLogAndName p{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    text-align: center;
+    padding: 8px 20px;
+    background-color: transparent;
+}
+
+
+
+/* styling for terms and condition, privacy policy */
+
+.termsAndConditionAndPrivacyPolicy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.termsAndCondition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #611ead;
+    padding: 40px 10px;
+    background-color: transparent;
+}
+
+.termsAndCondition h2{
+    margin: 5px 0px 30px 0px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.termsAndCondition p{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    padding: 8px 0px;
+    background-color: transparent;
+}
+
+.privacyPolicy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 40px 10px;
+    background-color: transparent;
+}
+
+.privacyPolicy h2{
+    margin: 5px 0px 30px 0px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Merriweather', Courier;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.privacyPolicy p{
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Inter', Courier;
+    padding: 8px 0px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query for responsiveness to home page*/
+
+
+
+
+
+@media (max-width:1350px) {
+    
+    .thanking{
+        width: 420px;
+        height: 320px;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0px auto;
+    }
+}
+
+@media (max-width:1200px) {
+
+    /* Designing for left and right animation div of laptop */
+
+    .rightSlideSubDiv{
+        border-radius: 40px 0px 0px 40px;
+        height: 180px;
+    }
+
+    .leftSlideSubDiv{
+        border-radius: 0px 40px 40px 0px;
+        height: 180px;
+    }
+
+    .lefticon{
+        border-radius: 40px 0px 0px 40px;
+        height: 100%;
+        width: 35%;
+        font-size: 110px;
+    }
+
+    .righticon{
+        border-radius: 0px 40px 40px 0px;
+        height: 100%;
+        width: 35%;
+        font-size: 110px;
+    }
+
+    .leftSlideSubDiv p{
+        width: 65%;
+    }
+
+    .rightSlideSubDiv p{
+        width: 65%;
+    }
+}
+
+@media (max-width:1050px) {
+
+    /* Designing for left and right animation div of laptop */
+    
+    .rightSlideSubDiv{
+        border-radius: 30px 0px 0px 30px;
+        height: 160px;
+    }
+
+    .leftSlideSubDiv{
+        border-radius: 0px 30px 30px 0px;
+        height: 160px;
+    }
+
+    .lefticon{
+        border-radius: 30px 0px 0px 30px;
+        height: 100%;
+        width: 35%;
+        font-size: 100px;
+    }
+
+    .righticon{
+        border-radius: 0px 30px 30px 0px;
+        height: 100%;
+        width: 35%;
+        font-size: 100px;
+    }
+
+    .leftSlideSubDiv p{
+        width: 65%;
+        margin: 0px 5px;
+        font-size: 15px;
+    }
+
+    .rightSlideSubDiv p{
+        width: 65%;
+        margin: 0px 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:950px) {
+
+     /* Designing for left and right animation div of laptop */
+
+    .leftAnimationDiv{
+        width: 49%;
+    }
+
+    .rightAnimationDiv{
+        width: 49%;
+    }
+
+    .leftSlideSubDiv{
+        border-radius: 0px 20px 20px 0px;
+        height: 150px;
+    }
+
+    .rightSlideSubDiv{
+        border-radius: 20px 0px 0px 20px;
+        height: 150px;
+    }
+
+    .lefticon{
+        border-radius: 20px 0px 0px 20px;
+        height: 100%;
+        width: 30%;
+        font-size: 90px;
+    }
+
+    .righticon{
+        border-radius: 0px 20px 20px 0px;
+        height: 100%;
+        width: 30%;
+        font-size: 90px;
+    }
+
+    .leftSlideSubDiv p{
+        margin: 0px 5px;
+        width: 65%;
+        font-size: 14px;
+    }
+
+    .rightSlideSubDiv p{
+        margin: 0px 5px;
+        width: 65%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:900px) {
+
+    /* styling for footer section in main tag */
+
+    .signUp{
+        width: 55%;
+    }    
+
+    .goToAndTutorialFordiv{
+        width: 45%;
+    }
+
+    .goUp{
+        width: 45%;
+    }
+
+    .tutorialFor{
+        width: 55%;
+    }
+}
+
+@media (max-width:800px) {
+
+    .leftAnimationDiv{
+        display: none;
+    }
+
+    .rightAnimationDiv{
+        display: none;
+    }
+
+    .animationSlideDivForMobile{
+        display: flex;
+    }
+}
+
+@media (max-width:700px) {
+
+    /* Designing for left and right animation div of Mobile */
+
+    .leftIconSlideSubDiv{
+        width: 95%;
+        height: 170px;
+    }
+    
+    .rightIconSlideSubDiv{
+        width: 95%;
+        height: 170px;
+    }
+
+    .langIcon{
+        height: 100%;
+        width: 30%;
+        font-size: 90px;
+    }
+    
+    .leftIconSlideSubDiv p{
+        width: 70%;
+    }
+    
+    .rightIconSlideSubDiv p{
+        width: 70%;
+    }
+
+
+    /* styling about section paragraph sivision */
+
+    .information{
+        margin: 10px 40px 60px 40px;
+     }
+}
+
+@media (max-width:600px) {
+    
+    /* Designing for left and right animation div of Mobile */
+    
+    .leftIconSlideSubDiv{
+        width: 95%;
+        height: 160px;
+        border-radius: 20px;
+    }
+    
+    .rightIconSlideSubDiv{
+        width: 95%;
+        height: 160px;
+        border-radius: 20px;
+    }
+
+    .langIcon{
+        width: 28%;
+        font-size: 90px;
+        border-radius: 20px;
+    }
+
+    .leftIconSlideSubDiv p{
+        font-size: 15px;
+        width: 72%;
+    }
+    
+    .rightIconSlideSubDiv p{
+        font-size: 15px;
+        width: 72%;
+    }
+
+
+    /* Welcome section styling */
+
+    .displaySection{
+        height: 220px;
+    }
+    
+    .pickUpLine p{
+        margin: 0px 10px;
+        font-size: 16px;
+    }
+    
+    #compilerPickUp{
+        padding-top: 10px;
+    }
+
+    .scrollingNavigationSection{
+        margin: 60px 0px 20px 0px;
+    }
+
+    .navItemDiv{
+        height: 150px;
+        min-width: 170px;
+        border-radius: 25px;
+    }
+
+    .navItemDiv i{
+        padding: 5px;
+        font-size: 70px;
+        background-color: var(--navigationbg-color);
+    }
+
+    #about{
+        margin: 10px 15px;
+    }
+
+    #devloperHeading{
+        font-size: 29px;
+    }
+
+    
+    /* Styling for footer section */
+
+    .signUp h2{
+        font-size: 20px;
+    }
+
+    .goUp h2{
+        font-size: 20px;
+    }
+
+    .tutorialFor h2{
+        font-size: 20px;
+    }
+    
+    .signUpLabel{
+        font-size: 14px;
+    }
+    
+    .signUpInputTag{
+        border-radius: 5px;
+        padding: 2px 5px;
+        font-size: 14px;
+        width: 200px;
+        margin: 5px 0px;
+    }
+    
+    .goUp a{
+        font-size: 14px;
+        margin: 3px 0px;
+    }
+    
+    .rightTutorialFor a{
+        font-size: 14px;
+        margin: 3px 0px;
+    }
+
+    .leftTutorialFor a{
+        font-size: 14px;
+        margin: 3px 0px;
+    }
+
+    
+
+    /* styling about section paragraph sivision */
+
+    .information{
+        margin: 10px 30px 60px 30px;
+        font-size: 16px;
+     }
+}
+
+
+@media (max-width:540px) {
+    
+    /* Styling for footer section */
+    
+    .signUpTable{
+        border-collapse: separate;
+        border-spacing: 0px 5px;
+    }
+
+    .signUpTableRow{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .signUpLabel{
+        padding-left: 5px; 
+    }
+
+    .signUpInputTag{
+        width: 250px;
+        padding: 5px;
+        border-radius: 0px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+    .signUpInputTag:hover{
+        outline: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .signUpInputTag:active {
+        outline: none;
+        box-shadow: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .goUp a{
+        margin: 5px 0px;
+    }
+    
+    .rightTutorialFor a{
+        font-size: 14px;
+        margin: 5px 0px;
+    }
+
+    .leftTutorialFor a{
+        font-size: 14px;
+        margin: 5px 0px;
+    }
+
+    .signUp h2{
+        font-size: 18px;
+    }
+
+    .goUp h2{
+        font-size: 18px;
+    }
+
+    .tutorialFor h2{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:500px) {
+    
+    /* Designing for left and right animation div of Mobile */
+    
+    .leftIconSlideSubDiv{
+        width: 95%;
+        height: 150px;
+        border-radius: 15px;
+    }
+    
+    .rightIconSlideSubDiv{
+        width: 95%;
+        height: 150px;
+        border-radius: 15px;
+    }
+
+    .langIcon{
+        height: 100%;
+        width: 33%;
+        font-size: 80px;
+        border-radius: 15px;
+    }
+
+    .leftIconSlideSubDiv p{
+        width: 67%;
+        margin: 0px 5px;
+    }
+    
+    .rightIconSlideSubDiv p{
+        width: 67%;
+        margin: 0px 5px;
+    }
+
+
+    /* Sliding navigation tag design which is present before welcoming*/
+
+    .navItemDiv{
+        height: 150px;
+        min-width: 150px;
+        border-radius: 25px;
+    }
+
+    .navItemDiv i{
+        padding: 5px;
+        font-size: 60px;
+        background-color: var(--navigationbg-color);
+    }
+
+    .scrollingNavigationSection{
+        margin: 60px 0px 10px 0px;
+    }
+
+    .navItemDiv p{
+        font-size: 20px;
+    }
+
+
+    /* Styling of welcoming section which is present after sliding navigation */
+
+    .displaySection{
+        height: 230px;
+    }
+
+    .welcoming h1{
+        font-size: 25px;
+    }
+
+    #about{
+        margin: 0px 10px;
+    }
+
+
+    /* RateUs section styling for mobile */
+
+    .animationSideDivDisplay{
+        margin: 10px 0px 10px 0px;
+    }
+
+
+    .rateUsSection{
+        margin: 10px 0px 20px 0px;
+    }
+    
+    .tableDivision{
+        width: 92%;
+        margin: 20px 0px;
+        border-radius: 30px;
+    }
+    
+    .rateUseHeading{
+        margin: 50px 0px 50px 0px;
+        font-size: 25px;
+    }
+    
+    label{
+        font-size: 15px;
+    }
+    
+    .warning{
+        font-size: 12px;
+    }
+    
+    .rateUsInput{
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 15px;
+        width: 250px;
+        margin: 5px 10px;
+    }
+
+    .stars span{
+        font-size: 50px;
+        margin: 0px 10px;
+    }
+    
+    #textarea1{
+        width: 350px;
+        margin: 15px 0px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    
+    #submitButton{
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 5px 0px;
+        width: 100px;
+        margin: 15px 0px 35px 0px;
+    }
+
+
+    /* About Section styling for mobile */
+    
+    .aboutSection{
+        width: 92%;
+        margin: 20px 0px 30px 0px;
+        box-shadow: 0px 0px 20px 2px rgb(157, 133, 133);
+        border-radius: 30px;
+    }
+    
+    .devloperImages{
+        margin: 60px 0px 30px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #devloperHeading{
+        font-size: 25px;
+    }
+    
+    .devloperImages p{
+        font-size: 22px;
+    }
+    
+    .images{  
+        margin-top: 12px;
+        width: 222px;
+        height: 236px;
+    }
+    
+    .images img{
+        box-shadow: 0px 0px 5px 2px rgb(148, 125, 125);
+        max-width: 201px;
+        min-width: 200px;
+        max-height: 201px;
+        min-height: 200px;
+        border-radius: 50%;
+        margin: 10px;
+    }
+    
+    .information{
+        font-size: 18px;
+        margin: 10px 20px 60px 20px;
+    }
+
+
+    /* Styling For thnking dialoge box*/
+
+    .thanking{
+        width: 320px;
+        height: 260px;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0px auto;
+    }
+
+
+
+
+    
+    /* Styling for footer section */
+
+    .topDivInsideFooter{
+        flex-direction: column;
+    }
+
+    .signUp{
+        width: 100%;
+    }   
+
+    .signUpInputTag{
+        width: 80vw;
+    }
+    
+    .goToAndTutorialFordiv{
+        width: 100%;
+    }
+
+    .goUp{
+        width: 40%;
+    }
+
+    .tutorialFor{
+        width: 60%;
+    }
+
+    .leftrightTutorialFor{
+        flex-direction: row;
+    }
+
+    /* medial link div styling */
+
+    .mediaLink{
+        margin: 50px 0px 10px 0px;
+    }
+
+
+    /* style for terms and condition and privacy policy */
+
+    .termsAndCondition h2{
+        font-size: 18px;
+    }
+
+    .privacyPolicy h2{
+        font-size: 18px;
+    }
+
+    
+
+    /* styling about section paragraph sivision */
+
+    .information{
+        margin: 10px 20px 50px 20px;
+        font-size: 15px;
+     }
+    
+}
+
+@media (max-width:440px) {
+
+    /* Designing for left and right animation div of Mobile */
+    
+    .leftIconSlideSubDiv{
+        height: 140px;
+    }
+    
+    .rightIconSlideSubDiv{
+        height: 140px;
+    }
+
+    .langIcon{
+        height: 100%;
+        width: 33%;
+        font-size: 70px;
+        border-radius: 15px;
+    }
+
+    .leftIconSlideSubDiv p{
+        margin-left: 2px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    .rightIconSlideSubDiv p{
+        margin-right: 2px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    /* Styling of welcoming section which is present after sliding navigation */
+
+    .displaySection{
+        height: 250px;
+    }
+
+    .welcoming h1{
+        font-size: 25px;
+    }
+
+
+    /* RateUs section styling for mobile */
+
+    .tableDivision table tr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tableDivision table tr td{
+        padding: 2px 0px;
+        width: 100%;
+    }
+
+    .rateUseHeading{
+        font-size: 22px;
+    }
+    
+    label{
+        font-size: 15px;
+    }
+    
+    .warning{
+        font-size: 12px;
+    }
+    
+    .rateUsInput{
+        border-radius: 0px;
+        padding: 5px 10px;
+        font-size: 15px;
+        width: 300px;
+        margin: 5px 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .rateUsInput:hover{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    .rateUsInput:hover{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    .stars span{
+        font-size: 40px;
+        margin: 0px 10px;
+    }
+    
+    #textarea1{
+        width: 320px;
+        margin: 15px 0px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+
+    /* About Section styling for mobile */
+    
+    #devloperHeading{
+        font-size: 22px;
+        font-weight: bolder;
+    }
+    
+    .devloperImages p{
+        font-size: 20px;
+    }
+    
+    .information{
+        font-size: 18px;
+        margin: 10px 20px 60px 20px;
+    }
+
+
+    /* Styling for submenus */
+
+    #rateUs{
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    #about{
+        font-size: 14px;
+        margin: 0px 8px;
+    }
+
+    #login{
+        font-size: 14px;
+        margin: 0px;
+    }
+
+}
+
+@media (max-width:400px) {
+    
+    /* Designing for left and right animation div of Mobile */
+    
+    .leftIconSlideSubDiv{
+        width: 95%;
+        height: 130px;
+        border-radius: 10px;
+    }
+    
+    .rightIconSlideSubDiv{
+        width: 95%;
+        height: 130px;
+        border-radius: 10px;
+    }
+
+    .langIcon{
+        height: 100%;
+        width: 30%;
+        font-size: 70px;
+        border-radius: 10px;
+    }
+
+    .leftIconSlideSubDiv p{
+        width: 70%;
+        margin: 2px;
+        font-size: 13px;
+    }
+    
+    .rightIconSlideSubDiv p{
+        width: 70%;
+        margin: 2px;
+        font-size: 13px;
+    }
+
+
+    /* RateUs section styling for mobile */
+
+    .rateUseHeading{
+        font-size: 20px;
+    }
+
+    .tableDivision table tr td{
+        padding: 2px 0px;
+        width: 100%;
+    }
+    
+    .rateUsInput{
+        border-radius: 0px;
+        padding: 5px 10px;
+        font-size: 15px;
+        width: 90%;
+        margin: 5px 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .stars span{
+        font-size: 40px;
+        margin: 0px 5px;
+    }
+    
+    #textarea1{
+        width: 80%;
+        margin: 15px 0px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+
+    /* About Section styling for mobile */
+    
+    #devloperHeading{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+    .devloperImages p{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .information{
+        font-size: 16px;
+        margin: 10px 20px 60px 20px;
+    }
+
+
+
+
+
+    /* style for terms and condition and privacy policy */
+
+    .termsAndConditionAndPrivacyPolicy{
+        align-items: flex-start;
+    }
+
+    .termsAndCondition{
+        width: 55%;
+    }
+
+    .privacyPolicy{
+        width: 45%;
+    }
+
+    .termsAndCondition h2{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .privacyPolicy h2{
+        align-items: center;
+        font-size: 18px;
+    }
+
+    
+    
+
+    /* styling about section paragraph sivision */
+
+    .information{
+        margin: 10px 15px 50px 15px;
+        font-size: 14px;
+     }
+
+}
+
+@media (max-width:360px) {
+
+    /* Designing for left and right animation div of Mobile */
+    
+    .leftIconSlideSubDiv{
+        width: 95%;
+        height: 140px;
+        border-radius: 10px;
+    }
+    
+    .rightIconSlideSubDiv{
+        width: 95%;
+        height: 140px;
+        border-radius: 10px;
+    }
+
+    .langIcon{
+        height: 100%;
+        width: 30%;
+        font-size: 60px;
+        border-radius: 10px;
+    }
+
+    .leftIconSlideSubDiv p{
+        width: 70%;
+        margin: 2px;
+        font-size: 12px;
+    }
+    
+    .rightIconSlideSubDiv p{
+        width: 70%;
+        margin: 2px;
+        font-size: 12px;
+    }
+
+
+    /* styling for welcoming section which is present belove slide navigation bar */
+
+    .displaySection{
+        height: 230px;
+    }
+
+    .welcoming{
+        height: 25%;
+    }
+
+    .welcoming h1{
+        font-size: 20px;
+        height: 50%;
+    }
+    
+    .pickUpLine{
+        width: 100%;
+        height: 75%;
+    }
+    
+    .pickUpLine p{
+        font-size: 15px;
+        padding: 3px;
+    }
+
+
+    /* Styling for thnking dialog */
+
+    .thanking{
+        width: 260px;
+        height: 260px;
+    }
+    
+    #smileIcon{
+        font-size: 100px;
+    }
+    
+    .thanking h1{
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    /*  #badLuckIcon #thankHeading for dinamicaly display */
+
+    #badLuckIcon{
+        font-size: 80px;
+    }
+
+    #thankHeading{
+        margin-bottom: 0px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+
+
+
+    .goUp{
+        width: 35%;
+    }
+
+    .tutorialFor{
+        width: 65%;
+    }
+
+    .leftTutorialFor a{
+        font-size: 13px;
+    }
+
+    .rightTutorialFor a{
+        font-size: 13px;
+    }
+
+    /* style for terms and condition and privacy policy */
+
+    .termsAndConditionAndPrivacyPolicy{
+        align-items: flex-start;
+    }
+
+    .termsAndCondition{
+        width: 55%;
+    }
+
+    .privacyPolicy{
+        width: 45%;
+    }
+
+    .termsAndCondition h2{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .privacyPolicy h2{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .termsAndCondition p{
+        font-size: 14px;
+    }
+
+    .privacyPolicy p{
+        font-size: 14px;
+    }
+
+
+    
+
+    /* Styling for submenus */
+
+    #rateUs{
+        font-size: 14px;
+        margin: 0px;
+        padding: 5px 5px;
+        border-radius: 8px;
+    }
+
+    #about{
+        font-size: 14px;
+        margin: 0px 15px;
+        padding: 5px 5px;
+        border-radius: 8px;
+    }
+
+    #login{
+        font-size: 14px;
+        margin: 0px;
+        padding: 5px 5px;
+        border-radius: 8px;
+    }
+
+
+}
+
+
+@media (max-width:340px) {
+
+        /* RateUs section styling for mobile */
+
+        .tableDivision table tr td{
+            padding: 2px 0px;
+            width: 100%;
+        }
+        
+        label{
+            padding-left: 10px;
+        }
+
+        .rateUsInput{
+            border-radius: 0px;
+            padding: 5px 10px;
+            font-size: 20px;
+            width: 80%;
+            margin: 5px 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    
+        .stars span{
+            font-size: 40px;
+            margin: 0px 5px;
+        }
+        
+        #textarea1{
+            width: 80%;
+            margin: 15px 0px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+    
+    
+        /* About Section styling for mobile */
+        
+        #devloperHeading{
+            margin: 0px 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        
+        .devloperImages p{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .information{
+            font-size: 16px;
+            margin: 10px 20px 60px 20px;
+        }
+    
+}
+
+
+@media (max-width:300px) {
+    
+    /* Designing for left and right animation div of Mobile */
+    
+    .langIcon{
+        font-size: 50px;
+    }
+
+    .leftIconSlideSubDiv p{
+        font-size: 11px;
+    }
+    
+    .rightIconSlideSubDiv p{
+        font-size: 11px;
+    }
+
+
+     /* Styling for thnking dialog */
+
+     .thanking{
+        width: 230px;
+        height: 230px;
+    }
+}
